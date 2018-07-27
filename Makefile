@@ -11,9 +11,9 @@ BUILD_DEPS = \
 DEP_PLUGINS = \
 	version.mk
 
-dep_poolboy = git git://github.com/manifest/poolboy.git feature/worker-args-any
+dep_poolboy = git https://github.com/manifest/poolboy.git feature/worker-args-any
 dep_epgsql = git https://github.com/epgsql/epgsql.git 4.1.0
-dep_version.mk = git git://github.com/manifest/version.mk.git master
+dep_version.mk = git https://github.com/manifest/version.mk.git v0.2.0
 
 SHELL_DEPS = tddreloader
 SHELL_OPTS = \
@@ -23,3 +23,7 @@ SHELL_OPTS = \
 include erlang.mk
 
 app:: rebar.config
+
+.PHONY: elvis
+elvis:
+	./elvis rock -c elvis.config
