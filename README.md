@@ -2,6 +2,8 @@
 
 PostgreSQL connection pool library with support for re-establishing of lost connection.
 
+[![Build Status][travis-img]][travis]
+
 
 
 ### How To Use
@@ -45,3 +47,5 @@ pgsqlc_pool:unlock(default, Pid).
 The source code is provided under the terms of [the MIT license][license].
 
 [license]:http://www.opensource.org/licenses/MIT
+[travis]:https://travis-ci.org/manifest/postgresql-connection-pool?branch=master
+[travis-img]:https://secure.travis-ci.org/manifest/postgresql-connection-pool.png?branch=master
